@@ -2,9 +2,9 @@
 
 Building off the [textual analysis from before](https://github.com/geraldiner/textual-analysis), I decided to look into other ways to process text to find what I'm looking for. I came across [this thread on Reddit](https://www.reddit.com/r/datascience/comments/dhchq2/extracting_movie_titles_from_text_source/), which was exactly what I needed to do!
 
-However it didn't look like the original poster got anywhere with it. So I followed the suggestions from the commenters and I came to a [simple walkthrough for entity recognition](https://towardsdatascience.com/using-spacy-3-0-to-build-a-custom-ner-model-c9256bea098) using [Spacy](https://spacy.io/). There was another tutorial I'd started following, but apparently it was based on a previous version of Spacy, and apparently the new version broke a lot of things.
+However it didn't look like the original poster got anywhere with it. So I followed the suggestions from the commenters and I came to a [simple walkthrough for entity recognition](https://towardsdatascience.com/using-spacy-3-0-to-build-a-custom-ner-model-c9256bea098) using [Spacy](https://spacy.io/). There was another tutorial I'd started following based on a previous version of Spacy, but apparently the new version broke a lot of things.
 
-The tutorial walked me through converting my training set data to the new `.spacy` format. The comments below are from real comments from the original thread I plan to work with.
+The tutorial walked me through converting my training set data to the new `.spacy` format. The text below are from real comments from the original thread I plan to work with.
 
 ```
 DATA = [
@@ -27,10 +27,12 @@ DATA = [
 
 Then we got to train and test the new model. TBH, I didn't understand the output too much because I have virtually no knowledge of machine learning. I do understand that it tried its best and it can only be as good as the size of the training set (in my case 4 items).
 
+![Training pipeline for my model](https://cdn.discordapp.com/attachments/377363002619461633/839063854398046248/unknown.png)
+
 So it's no surprise that after testing the model on new, foreign text, it didn't do so well. On the first run, I input a comment that was part of the training set, so it caught it. In the second run, I input a foreign text with two movies, *The Jungle Book* and *Clerks*. It only caught part of someone's name from the text.
 
-[Results of predictions with model](https://cdn.discordapp.com/attachments/377363002619461633/839057962768662549/unknown.png)
+![Results of predictions with model](https://cdn.discordapp.com/attachments/377363002619461633/839057962768662549/unknown.png)
 
 In an earlier reading, I remember reading about pre-built models, the most popular seeming to be `en_core_web_sm`. And while it caught some significant text, it wasn't what I was looking for.
 
-[Results of prediction with pre-built model](https://cdn.discordapp.com/attachments/377363002619461633/839058092956057630/unknown.png)
+![Results of prediction with pre-built model](https://cdn.discordapp.com/attachments/377363002619461633/839058092956057630/unknown.png)
