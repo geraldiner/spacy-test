@@ -2,7 +2,7 @@
 
 Building off the [textual analysis from before](https://github.com/geraldiner/textual-analysis), I decided to look into other ways to process text to find what I'm looking for. I came across [this thread on Reddit](https://www.reddit.com/r/datascience/comments/dhchq2/extracting_movie_titles_from_text_source/), which was exactly what I needed to do!
 
-However it didn't look like the original poster got anywhere with it. So I followed the suggestions from the commenters and I came to a simple walkthrough of entity recognition using [Spacy](https://towardsdatascience.com/using-spacy-3-0-to-build-a-custom-ner-model-c9256bea098). There was another tutorial I'd started following, but apparently it was based on a previous version of Spacy, and apparently the new version broke a lot of things.
+However it didn't look like the original poster got anywhere with it. So I followed the suggestions from the commenters and I came to a [simple walkthrough for entity recognition](https://towardsdatascience.com/using-spacy-3-0-to-build-a-custom-ner-model-c9256bea098) using [Spacy](https://spacy.io/). There was another tutorial I'd started following, but apparently it was based on a previous version of Spacy, and apparently the new version broke a lot of things.
 
 The tutorial walked me through converting my training set data to the new `.spacy` format. The comments below are from real comments from the original thread I plan to work with.
 
