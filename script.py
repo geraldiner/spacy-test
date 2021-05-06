@@ -1,12 +1,3 @@
-# import spacy
-
-# nlp = spacy.load("en_core_web_sm")
-# doc = nlp(
-#     u"#bbuzz 2016: Rafał Kuć - Running High Performance And Fault Tolerant Elasticsearch"
-# )
-# for entity in doc.ents:
-#     print(entity.label_, " | ", entity.text)
-
 sample = [
     {
         "author": "Thatweebthatsimps",
@@ -148,6 +139,76 @@ sample = [
         "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlblqe/",
         "score": 8,
     },
+    {
+        "author": "JasterCreed",
+        "body": "Clash of the Titans(1981), Mighty Joe Young(1949), and Journey to the Center of the Earth(1959). Heck, anything with Ray Harryhausen on special effects.",
+        "id": "gvlfunc",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlfunc/",
+        "score": 5,
+    },
+    {
+        "author": "Feelingofsunday",
+        "body": "To each his own! :D",
+        "id": "gvlfwzs",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlfwzs/",
+        "score": 2,
+    },
+    {
+        "author": "Feelingofsunday",
+        "body": "Yeah that one really is magical!",
+        "id": "gvlfxyz",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlfxyz/",
+        "score": 82,
+    },
+    {
+        "author": "Feelingofsunday",
+        "body": "I love that one as well!",
+        "id": "gvlfz0c",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlfz0c/",
+        "score": 66,
+    },
+    {
+        "author": "dieinafirenazi",
+        "body": "Best Star Wars movie so far.",
+        "id": "gvlg139",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlg139/",
+        "score": -10,
+    },
+    {
+        "author": "QueasyStress0",
+        "body": "The Last Jedi.\n\nI'll never forget the feeling I had after walking out of the cinema for this one. Confused about my feelings,both happy and sad.",
+        "id": "gvlg2o0",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlg2o0/",
+        "score": 7,
+    },
+    {
+        "author": "NoKenjataimu",
+        "body": "It's only getting better as the years pass!",
+        "id": "gvlg3wp",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlg3wp/",
+        "score": -4,
+    },
+    {
+        "author": "Feelingofsunday",
+        "body": "That movie really is something else. It's funny, sad, exciting, sad, filled with action, sad, great music as well! Magical. I cry everytime.",
+        "id": "gvlg4fm",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlg4fm/",
+        "score": 56,
+    },
+    {
+        "author": "Feelingofsunday",
+        "body": "It's really cool when movies get to you even though they're about something you're not really into!",
+        "id": "gvlg7k5",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlg7k5/",
+        "score": 60,
+    },
+    {
+        "author": "05110909",
+        "body": '"Death is a disease."',
+        "id": "gvlgbls",
+        "permalink": "/r/AskReddit/comments/mx0pwd/what_movie_is_simply_magical_to_you_no_matter_how/gvlgbls/",
+        "score": 26,
+    },
 ]
 
 search = [
@@ -171,6 +232,20 @@ search = [
     ["Kung Pow: Enter the Fist"],
     [],
     [],
+    [
+        "Clash of the Titans(1981)",
+        "Mighty Joe Young(1949)",
+        "Journey to the Center of the Earth(1959)",
+    ],
+    [],
+    [],
+    [],
+    [],
+    ["The Last Jedi"],
+    [],
+    [],
+    [],
+    [],
 ]
 
 DATA = []
@@ -185,6 +260,8 @@ for i in range(0, len(sample)):
         value["entities"].append((start, start + wordLength, "movie"))
     DATA.append((text, value))
 
+# print(len(DATA))
+# print(len(search))
 
 # print(DATA)
 outputFile = open("training_data.py", "a", encoding="utf-8")
