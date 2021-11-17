@@ -38,13 +38,16 @@ In an earlier reading, I remember reading about pre-built models, the most popul
 ![Results of prediction with pre-built model](https://cdn.discordapp.com/attachments/377363002619461633/839058092956057630/unknown.png)
 
 # Next Steps
-I think the most obvious next step is to add more to the training set. The older tutorial had mentioned having a smaller training set meant looping multiple times on it in any various shuffled order. This was deprecated with the new version of Spacy. In the new tutorial, there were 11 items, which means I'd have to have at least that much to get a better result with predictions. I'll go with a relatively safer number (eg. 20) and try again tomorrow## Other Projects
+I think the most obvious next step is to add more to the training set. The older tutorial had mentioned having a smaller training set meant looping multiple times on it in any various shuffled order. This was deprecated with the new version of Spacy. In the new tutorial, there were 11 items, which means I'd have to have at least that much to get a better result with predictions. I'll go with a relatively safer number (eg. 20) and try again tomorrow
+## Other Projects
 
 Check out other stuff I've worked on:
 
 **Minute To Win It Games API & Wiki**: https://github.com/geraldiner/min-to-win
 
 **Rehabitter:** https://github.com/geraldiner/rehabitter
+
+**Snapchat Clone:** https://github.com/geraldiner/snapchat-clone
 
 **K.K. Radio:** https://github.com/geraldiner/kk-radio
 
