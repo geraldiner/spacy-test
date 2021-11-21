@@ -40,6 +40,7 @@ In an earlier reading, I remember reading about pre-built models, the most popul
 ## Next Steps
 I think the most obvious next step is to add more to the training set. The older tutorial had mentioned having a smaller training set meant looping multiple times on it in any various shuffled order. This was deprecated with the new version of Spacy. In the new tutorial, there were 11 items, which means I'd have to have at least that much to get a better result with predictions. I'll go with a relatively safer number (eg. 20) and try again tomorrow
 
+
 ## Other Projects
 
 Check out other stuff I've worked on:
@@ -51,5 +52,3 @@ Check out other stuff I've worked on:
 **Snapchat Clone:** https://github.com/geraldiner/snapchat-clone
 
 **K.K. Radio:** https://github.com/geraldiner/kk-radio
-
-**Interactive Piano:** https://github.com/geraldiner/piano
